@@ -13,12 +13,12 @@ HardwareDeviceStub.prototype.send = function (deviceid, temp1, temp2, pres1, pre
 			"sensor1": 
 			{
 				"temperature": `+temp1+`,
-				"presence": `+pres1?'1':'0'+`
+				"presence": `+(pres1?'1':'0')+`
 			},
 			"sensor2":
 			{
 				"temperature": `+temp2+`,
-				"presence": `+pres2?'1':'0'+`
+				"presence": `+(pres2?'1':'0')+`
 			}
 		}`
 	);
