@@ -25,7 +25,7 @@ HardwareDeviceStub.prototype.send = function (deviceid, temp1, temp2, pres1, pre
 };
 
 HardwareDeviceStub.prototype.disconnect = function (endpoint) {
-	HardwareDeviceStub.prototype.client.disconnect();
+	HardwareDeviceStub.prototype.client.end();
 };
 
 module.exports = new HardwareDeviceStub();
