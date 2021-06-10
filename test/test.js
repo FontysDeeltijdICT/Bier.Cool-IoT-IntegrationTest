@@ -32,6 +32,19 @@ describe('Send Temperature', () => {
   });
 });
 
+describe('MQTT ACL test', () => {
+  it('Should be disconnected', done => {
+	setTimeout(function(){
+		chai.should();
+		devStub.send("biercooldev5", t1, t2, true, true);
+		setTimeout(function(){		
+			devStub.client.connected.should.equal(false);
+			done();
+		}, 50);
+	}, 300);
+  });
+});
+
 describe('Check database', () => {
   it('Should match the send temperature', function(done) {
 	this.timeout(7500);
